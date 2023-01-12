@@ -1,0 +1,27 @@
+@use './globalStyles/variables';
+
+.page-container{
+    position: relative;
+    min-height: 100vh;
+    font-family: Inter;
+    background-color: #FAFBFB;
+    .content-wrap {
+        padding-bottom: 70px; 
+    }
+}
+
+h4 {
+    color: variables.$heading-clr;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 27px;
+    margin:0
+}
+
+P {
+    color: variables.$paragraph-clr;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 27px;
+}

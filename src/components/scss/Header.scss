@@ -1,0 +1,59 @@
+@use '../../globalStyles/variables';
+
+.Header {
+  position: relative;
+  background: variables.$header-bg-clr;
+  
+  .header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    @media only screen and (max-width: variables.$tablet-size) {
+      min-height: 80px;
+    }
+    .logo-wrapper {
+      position: absolute;
+      left: 50px;
+      background: variables.$header-bg-clr;
+      @media only screen and (max-width: variables.$tablet-size) {
+        position: relative;
+        left:auto;
+      }
+      .logo-img {
+        height: 28px;
+      }
+    }
+    .step-wrapper-desk {
+      @media only screen and (min-width: variables.$tablet-size) {
+        height: 100%;
+        display: block;
+      }
+      @media only screen and (max-width: variables.$tablet-size) {
+        display: none;
+      }
+    }
+  }
+  .step-wrapper-tab {
+    @media only screen and (min-width: variables.$tablet-size) {
+      display: none;
+    }
+    @media only screen and (max-width: variables.$tablet-size) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  .close-wrapper {
+    position: absolute;
+    right: 20px;
+    color: #fff;
+    .close-img {
+      width: 32px;
+      height: 32px;
+    }
+    
+  }
+}
+

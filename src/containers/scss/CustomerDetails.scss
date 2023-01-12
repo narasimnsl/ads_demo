@@ -1,0 +1,21 @@
+@use '../../globalStyles/variables';
+
+.customer-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding:30px;
+  @media only screen and (max-width: variables.$tablet-size) {
+    padding:10px;
+  }
+  .panel {
+    box-sizing: border-box;
+    border: 1px solid variables.$panel-border-clr;
+    padding: 36px 80px;
+    max-width: 600px;
+    @media only screen and (max-width: variables.$tablet-size) {
+      padding: 36px 15px;
+    }
+  }
+}

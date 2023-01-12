@@ -1,0 +1,21 @@
+@use '../../globalStyles/variables';
+
+.Footer {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  position: absolute;
+  bottom:0;
+  height: 70px;
+  width:100%;
+  padding-left: 50px;
+  background-color: variables.$footer-bg-clr;
+  .terms-link {
+    color: variables.$link-clr;
+    text-decoration: underline;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 17px;
+  }
+}
+
