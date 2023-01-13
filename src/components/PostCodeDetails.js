@@ -6,7 +6,9 @@ function PostCodeDetails() {
  
   const postParm = {
     label:'Postcode',
-    helperText:'Please enter the postcode where your car is garaged'
+    helperText:'Please enter the postcode where your car is garaged',
+    inputProps:{maxLength: 4},
+    error:false
   }
 
   return (

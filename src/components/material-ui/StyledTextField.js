@@ -2,6 +2,7 @@ import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const ValidationTextField = styled(TextField)({
     "&": {
@@ -23,21 +24,32 @@ const ValidationTextField = styled(TextField)({
     
 });
 
-export default function StyledTextField({formDetails}) {
-  return (
-   
-      <div>
-        <ValidationTextField
-          id="filled-helperText"
-          label={formDetails.label}
-          helperText={formDetails.helperText}
-          variant="filled"
-        />
-      </div>
-   
-  );
+export default function StyledTextField({formDetails, validateOnBlur}) {
+
+    const handleOnBlur = (event) => {
+        validateOnBlur(event.target.value);
+    };
+    const isMobile = useMediaQuery('(max-width:425px)', { noSsr: true });
+
+    return (
+    
+        <div>
+            <ValidationTextField
+            id="filled-helperText"
+            error = {formDetails.error}
+            label={formDetails.label}
+            helperText={formDetails.helperText}
+            variant="filled"
+            inputProps={formDetails.inputProps}
+            onBlur={handleOnBlur}
+            sx={{ minWidth:isMobile? 250: 350 }}
+            />
+        </div>
+    
+    );
 }
 
 StyledTextField.propTypes = {
-    formDetails: PropTypes.object
-  };
+    formDetails: PropTypes.object,
+    validateOnBlur: PropTypes.func
+};
