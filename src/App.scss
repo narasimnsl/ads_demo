@@ -1,10 +1,10 @@
-@use './globalStyles/variables';
+@use './components/scss/variables';
 
 .page-container{
     position: relative;
     min-height: 100vh;
     font-family: Inter;
-    background-color: #FAFBFB;
+    background-color: variables.$page-bg-clr;
     .content-wrap {
         padding-bottom: 70px; 
     }

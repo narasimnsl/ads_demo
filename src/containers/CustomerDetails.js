@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './scss/CustomerDetails.scss';
 import StyledToggleButton from '../components/material-ui/StyledToggleButton';
-import PostDetail from '../components/PostDetails';
+import PostCodeDetail from '../components/PostCodeDetails';
 import RegoDetails from '../components/RegoDetails';
 
 function CustomerDetails() {
@@ -19,7 +19,7 @@ function CustomerDetails() {
           <p>What’s your vehicle registration number or garaging postcode?</p>
           <StyledToggleButton toggleParam={toggleParam} onToggleChange={setToggleValue} />
           {toggleVal === toggleParam[0].value && <RegoDetails/>}
-          {toggleVal === toggleParam[1].value && <PostDetail/>}
+          {toggleVal === toggleParam[1].value && <PostCodeDetail/>}
         </div>
       </section>
     </div>
