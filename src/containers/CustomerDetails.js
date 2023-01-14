@@ -19,10 +19,10 @@ function CustomerDetails() {
         <div className="panel__content">
           <h4>One more thing</h4>
           <p>What’s your vehicle registration number or garaging postcode?</p>
-          <StyledToggleButton toggleParam={toggleParam} onToggleChange={setToggleValue} />
+          <StyledToggleButton aria-label="Toggle Button" toggleParam={toggleParam} onToggleChange={setToggleValue} />
           {toggleVal === toggleParam[0].value && <RegoDetails/>}
           {toggleVal === toggleParam[1].value && <PostCodeDetail/>}
-          <StyledButton buttonText="Continue"/>
+          <StyledButton aria-label="Continue Button" buttonText="Continue"/>
         </div>
       </section>
     </div>

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './scss/FormInput.scss';
 import StyledTextField from './material-ui/StyledTextField';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
 function RegoDetails() {
  
@@ -27,8 +28,9 @@ const validateOnBlur = (_val) => {
 
   return (
     <div className='form-input-details'>
-      <h4>What's your vehicle registration number?</h4>
-      <StyledTextField formDetails= {regoParm} validateOnBlur={validateOnBlur} />
+      <h4 className="inline-ele-mid" >What's your vehicle registration number?</h4>
+      <InfoOutlinedIcon aria-label="Rego Input Icon" className="inline-ele-mid info-icon"/>
+      <StyledTextField aria-label="Rego Input field" formDetails= {regoParm} validateOnBlur={validateOnBlur} />
     </div>
   );
 }
