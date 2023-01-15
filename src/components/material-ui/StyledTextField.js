@@ -56,7 +56,7 @@ export default function StyledTextField({formDetails, validateOnBlur}) {
             inputProps={formDetails.inputProps}
             onBlur={handleOnBlur}
             onChange={(e) => handleChange(e)}
-            sx={{ minWidth:isMobile? 250: 350 }}
+            sx={{ width:isMobile? 280: 350 }}
             value={num}
             />
         </div>

@@ -26,13 +26,10 @@ P {
     line-height: 27px;
 }
 
-.inline-ele-mid {
-    display: inline-block;
-    vertical-align: middle;
-}
-
 .info-icon {
     width:24px;
     height:24px;
     margin-left: 10px;
+    position: relative;
+    top:5px
 }
