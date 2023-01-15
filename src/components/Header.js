@@ -6,9 +6,13 @@ import StyledCircleStepper from './material-ui/StyledCircleStepper';
 import StyledLineStepper from './material-ui/StyledLineStepper';
 
 function Header() {
-  const stepperParam = [
+  const stepperCircleParam = [
     'Confirm your details',
     'Consent'
+  ]
+  const stepperLineParam = [
+    'Confirm your details',
+    '1 of 2'
   ]
   
   return (
@@ -18,14 +22,14 @@ function Header() {
               <img className="logo-img" src={logo} alt={'QBE logo'}></img>
           </div>
           <div className='step-wrapper-desk' aria-label="Steps">
-            <StyledCircleStepper stepDetails={stepperParam}/>
+            <StyledCircleStepper stepDetails={stepperCircleParam}/>
           </div>
           <div className='close-wrapper' aria-label="Close Button">
               <img className="close-img" src={CloseIcon} alt={'Close'}></img>
           </div>
       </div>
       <div className='step-wrapper-tab' aria-label="Steps">
-        <StyledLineStepper stepDetails={stepperParam}/>
+        <StyledLineStepper stepDetails={stepperLineParam}/>
       </div>
     </div>
   );
