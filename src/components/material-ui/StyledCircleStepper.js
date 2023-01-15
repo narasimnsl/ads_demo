@@ -55,7 +55,7 @@ const StyledStepper = styled(Stepper)({
    }
 });
 
-export default function StyledSteppedComp({stepDetails}) {
+export default function StyledCircleStepper({stepDetails}) {
   return (
     <StyledStepper nonLinear activeStep={0} alternativeLabel>
     {stepDetails.map((label) => (
@@ -67,6 +67,6 @@ export default function StyledSteppedComp({stepDetails}) {
   );
 }
 
-StyledSteppedComp.propTypes = {
+StyledCircleStepper.propTypes = {
     stepDetails: PropTypes.array
 };

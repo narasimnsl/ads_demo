@@ -2,7 +2,8 @@ import React from 'react';
 import logo from './assets/QBE-logo-on-dark@3x.png';
 import CloseIcon from './assets/Icon-r@3x.png';
 import './scss/Header.scss';
-import StyledSteppedComp from './material-ui/StyledStepper';
+import StyledCircleStepper from './material-ui/StyledCircleStepper';
+import StyledLineStepper from './material-ui/StyledLineStepper';
 
 function Header() {
   const stepperParam = [
@@ -17,15 +18,14 @@ function Header() {
               <img className="logo-img" src={logo} alt={'QBE logo'}></img>
           </div>
           <div className='step-wrapper-desk' aria-label="Steps">
-            <StyledSteppedComp stepDetails={stepperParam}/>
+            <StyledCircleStepper stepDetails={stepperParam}/>
           </div>
-          
           <div className='close-wrapper' aria-label="Close Button">
               <img className="close-img" src={CloseIcon} alt={'Close'}></img>
           </div>
       </div>
       <div className='step-wrapper-tab' aria-label="Steps">
-          STEP Tablet <br></br>trr
+        <StyledLineStepper stepDetails={stepperParam}/>
       </div>
     </div>
   );
