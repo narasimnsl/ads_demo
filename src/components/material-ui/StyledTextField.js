@@ -36,7 +36,7 @@ export default function StyledTextField({formDetails, validateOnBlur}) {
     const handleChange = (e) => {
         if(formDetails.type==='number') {
             const regex = /^[0-9\b]+$/;
-            if (e.target.value == "" || regex.test(e.target.value)) {
+            if (e.target.value === "" || regex.test(e.target.value)) {
             setNum(e.target.value);
             }
         } else {
