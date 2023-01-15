@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
@@ -26,10 +26,23 @@ const ValidationTextField = styled(TextField)({
 
 export default function StyledTextField({formDetails, validateOnBlur}) {
 
+    const isMobile = useMediaQuery('(max-width:425px)', { noSsr: true });
+    const [num, setNum] = useState('');
+
     const handleOnBlur = (event) => {
         validateOnBlur(event.target.value);
     };
-    const isMobile = useMediaQuery('(max-width:425px)', { noSsr: true });
+    
+    const handleChange = (e) => {
+        if(formDetails.type==='number') {
+            const regex = /^[0-9\b]+$/;
+            if (e.target.value == "" || regex.test(e.target.value)) {
+            setNum(e.target.value);
+            }
+        } else {
+            setNum(e.target.value);
+        }
+    };
 
     return (
     
@@ -42,7 +55,9 @@ export default function StyledTextField({formDetails, validateOnBlur}) {
             variant="filled"
             inputProps={formDetails.inputProps}
             onBlur={handleOnBlur}
+            onChange={(e) => handleChange(e)}
             sx={{ minWidth:isMobile? 250: 350 }}
+            value={num}
             />
         </div>
     

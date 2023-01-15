@@ -9,7 +9,8 @@ function PostCodeDetails() {
     label:'Postcode',
     helperText:'Please enter the postcode where your car is garaged',
     inputProps:{maxLength: 4},
-    error:false
+    error:false,
+    type: 'number'
   }
 
   return (
