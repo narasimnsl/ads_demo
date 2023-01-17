@@ -15,7 +15,7 @@ function PostCodeDetails() {
   }
 
   return (
-    <div className='form-input-details'>
+    <div className='form-input-details' data-testid="post-cmp">
         <h4 className="inline-ele-mid">What's your postcode?<span><InfoOutlinedIcon aria-label="Postcode Info Icon" className="info-icon"/></span></h4>
         <StyledTextField aria-label="Postcode Input field" formDetails= {postParm}/>
     </div>

@@ -17,7 +17,7 @@ function RegoDetails() {
   
 const validateOnBlur = (_val) => {
     // Validation failed for special charecters
-    if (! /^[a-zA-Z0-9-]+$/.test(_val)) {
+    if (! /^[a-zA-Z0-9-]+$/.test(_val) && _val !=='') {
       const errParam = {...regoParmDefault}
       errParam.error = true;
       errParam.helperText ='Special character in registration number';
@@ -29,7 +29,7 @@ const validateOnBlur = (_val) => {
  
 
   return (
-    <div className='form-input-details'>
+    <div className='form-input-details' data-testid="rego-cmp">
       <h4>What's your vehicle registration number?<span><InfoOutlinedIcon aria-label="Rego Input Icon" className="info-icon"/></span></h4>
       <StyledTextField aria-label="Rego Input field" formDetails= {regoParm} validateOnBlur={validateOnBlur} />
     </div>
